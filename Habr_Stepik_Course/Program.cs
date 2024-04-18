@@ -360,8 +360,6 @@ Eсли n = 7 тогда 1 x 3 x 5 x 7 = 105
 //ошибка в условии речь идет о нечетных числах
  */
 
-
-
 /*public class MainClass
 {
     public static void Main(string[] args)
@@ -387,3 +385,254 @@ Eсли n = 7 тогда 1 x 3 x 5 x 7 = 105
         return int.Parse(inputLine);
     }
 }*/
+
+
+//10
+
+/*У вас есть переменная n, которая содержит входные пользовательские данные.
+
+n - натуральное число.
+
+Напишите код, который определяет, будет ли это число: нечётным, кратным 7.
+
+Логический результат записать в переменную result.*/
+
+
+
+/*public class MainClass
+{
+    public static void Main(string[] args)
+    {
+        int n = ReadInput();
+        bool result = (n % 2 != 0 && n % 7 == 0) ? true : false;
+
+
+        Console.WriteLine(result.ToString().ToLower());
+    }
+public static int ReadInput()
+    {
+        string inputLine = Console.ReadLine();
+        return int.Parse(inputLine);
+    }
+}*/
+
+//11
+
+/*У вас есть переменная n, которая содержит входные пользовательские данные.
+
+n - натуральное число.
+
+Напишите код, который определяет, будет ли это число: четным, кратным 6.
+
+Логический результат записать в переменную result.*/
+
+
+/*public class MainClass
+{
+    public static void Main(string[] args)
+    {
+        int n = ReadInput();
+        bool result = (n % 2 == 0 && n % 6 == 0) ? true : false;
+
+
+        Console.WriteLine(result.ToString().ToLower());
+    }
+
+    public static int ReadInput()
+    {
+        string inputLine = Console.ReadLine();
+        return int.Parse(inputLine);
+    }
+}*/
+
+
+//12
+
+/*У вас есть переменные x1, x2, x3, которые содержат входные пользовательские данные.
+
+Напишите код, который находит максимальное и минимальное число из x1, x2, x3
+и записывает результат в переменную result.*/
+
+/*public class MainClass
+{
+    public static void Main(string[] args)
+    {
+        int x1, x2, x3;
+        
+
+        int[] inputValues = ReadInput();
+        x1 = inputValues[0];
+        x2 = inputValues[1];
+        x3 = inputValues[2];
+
+        int maxNumber = x1;
+        int minNumber = x1;
+
+        string result = $"минимальное: {inputValues.Min()}, максимальное:{inputValues.Max()}";
+
+        Console.WriteLine(result);
+    }
+
+    public static int[] ReadInput()
+    {
+        int[] inputValues = new int[3];
+
+        if (Console.ReadLine() is string input)
+        {
+            string[] values = input.Split(' ');
+            for (int i = 0; i < 3; i++)
+            {
+                inputValues[i] = int.Parse(values[i]);
+            }
+        }
+
+        return inputValues;
+    }
+}*/
+
+//13
+
+/*
+ * У вас есть переменная stars, которая содержит входные пользовательские данные.
+
+Значение переменной stars от 1 до 5. 
+
+1 — ★
+2 — ★★
+3 — ★★★
+4 — ★★★★
+5 — ★★★★★
+
+Напишите код, который проверяет значение переменной stars и записывает результат в переменную result.
+ */
+
+/*public class MainClass
+{
+    public static void Main(string[] args)
+    {
+        int stars = ReadInput();
+        string result = string.Empty;
+
+        for (int i = 0; i < stars; i++)
+        {
+            result += "★";
+        }
+
+
+        Console.WriteLine(result);
+        Console.ReadLine();
+    }
+
+    public static int ReadInput()
+    {
+        string inputLine = Console.ReadLine();
+        return int.Parse(inputLine);
+    }
+}*/
+
+//14
+
+/*
+ У вас есть переменные x, y и direction которые содержат входные пользовательские данные.
+
+x, y содержат числа - стартовая позиция игрока. 
+
+direction содержит направление движения, одного из: up, down, left, right.
+
+ y = 0 - самая верхняя точка
+y = 100 - самая нижняя
+
+x=0 - левая тоочка
+х=100 - правая точка*/
+
+/*public class MainClass
+{
+    public static void Main(string[] args)
+    {
+        int x, y;
+        string direction = string.Empty;
+
+
+
+        string[] inputValues = ReadInput();
+        x = int.Parse(inputValues[0]);
+        y = int.Parse(inputValues[1]);
+        direction = inputValues[2];
+
+        string result = direction switch
+        {
+
+        };
+
+
+
+
+
+
+        Console.WriteLine(result);
+    }
+
+    public static string[] ReadInput()
+    {
+        string[] inputValues = new string[3];
+
+        if (Console.ReadLine() is string input)
+        {
+            string[] values = input.Split(' ');
+            for (int i = 0; i < 3; i++)
+            {
+                inputValues[i] = values[i];
+            }
+        }
+
+        return inputValues;
+    }
+}*/
+
+//15
+
+/*У вас есть переменная n, которая содержит входные пользовательские данные.
+
+Напишите код, который проверяет является ли значение n негативным, позитивным или равно 0 и записывает результат в переменную result.
+
+Если n позитивное число тогда result = "Число позитивное"
+
+Если n негативное число тогда result = "Число негативное"
+
+Если n равно 0 число тогда result = "Число равно 0"*/
+
+/*public class MainClass
+{
+    public static void Main(string[] args)
+    {
+        int n = ReadInput();
+        string result = "";
+
+        // Проверяем значение 'n'
+        if (n > 0)
+        {
+            result = "Число позитивное";
+        }
+        else if (n < 0)
+        {
+            result = "Число негативное";
+        }
+        else
+        {
+            result = "Число равно 0";
+        }
+
+
+
+        Console.WriteLine(result);
+    }
+
+    public static int ReadInput()
+    {
+        string inputLine = Console.ReadLine();
+        return int.Parse(inputLine);
+    }
+}*/
+
+
+//16
