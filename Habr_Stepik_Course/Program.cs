@@ -709,7 +709,7 @@ n - положительное целое число
  */
 
 
-public class MainClass
+/*public class MainClass
 {
     public static void Main(string[] args)
     {
@@ -753,7 +753,7 @@ public class MainClass
         return Tuple.Create(n, m, k);
     }
 }
-    }
+    }*/
 
 
 
