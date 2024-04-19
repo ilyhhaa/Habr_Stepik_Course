@@ -755,6 +755,92 @@ n - положительное целое число
 }
     }*/
 
+//18
+
+/*У вас есть переменные message, k которые содержат входные пользовательские данные.
+
+message - строка состоящая из маленьких букв английского алфавита.
+
+k - целое число со значением от -100000 до 100000.
+
+Напишите код, который выполнит следующие действия в зависимости от значения k:
+
+Если k положительное, решение должно создать строку, являющуюся k-ой степенью строки message.
+То есть, результатом будет строка, в которой строка message повторяется k раз.
+ 
+Если k отрицательное, решение должно попытаться найти корень степени k из строки message.
+Для этого длина строки message должна быть кратной k.
+ 
+Если строка message имеет такую структуру, что можно найти корень, то решение должно создать строку корень степени k.
+В противном случае, решение должно создать строку NO SOLUTION.
+ 
+Если k равно нулю, функция должна вернуть пустую строку.
+Результат записать в виде новой строки в переменную result. 
+
+Sample Input 1:
+ab | 2
+Sample Output 1:
+abab
+Sample Input 2:
+ab | 4
+Sample Output 2:
+abababab
+Sample Input 3:
+abababab | -2
+*/
+
+/*
+using System.Text;
+
+public class MainClass
+{
+    public static void Main(string[] args)
+    {
+        var pair = ReadInput();
+        string message = pair.Item1;
+        int k = pair.Item2;
+        string result = "";
+
+        if (k > 0)
+        {
+            result = new StringBuilder(message.Length * k).Insert(0, message, k).ToString();
+        }
+        else if (k < 0)
+        {
+            if (message.Length % Math.Abs(k) != 0)
+            {
+                result = "NO SOLUTION";
+            }
+            else
+            {
+                string possibleRoot = message.Substring(0, message.Length / Math.Abs(k));
+                if (new StringBuilder(message.Length).Insert(0, possibleRoot, Math.Abs(k)).ToString() == message)
+                {
+                    result = possibleRoot;
+                }
+                else
+                {
+                    result = "NO SOLUTION";
+                }
+            }
+        }
+        else
+        {
+            result = "";
+        }
+
+
+        Console.WriteLine(result);
+    }
+
+    public static Tuple<string, int> ReadInput()
+    {
+        string[] input = Console.ReadLine().Trim().Split(" | ");
+        string message = input[0];
+        int k = int.Parse(input[1]);
+        return Tuple.Create(message, k);
+    }
+}*/
 
 
 
