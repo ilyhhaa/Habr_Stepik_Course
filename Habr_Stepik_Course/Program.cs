@@ -842,7 +842,62 @@ public class MainClass
     }
 }*/
 
+/19
 
+/*У вас есть переменная n которая содержит входные пользовательские данные.
+
+Напишите код, который определяет, есть ли у числа n брэйк-пойнт.
+
+"брэйк-пойнтом" называется такая точка в числе, при которой число можно разделить на две "равные" части, где сумма чисел слева и справа от этой точки равна.
+
+Например, число 35190 можно разделить на 351 и 90, потому что 3 + 5 + 1 = 9 и 9 + 0 = 9. А например у числа 555 такого брэйк-пойнта нет, так как оно нельзя разделить на две равные части.
+
+Логический результат записать в переменную result. 
+
+Важно!
+
+Каждая цифра числа является отдельным числом для целей данной задачи.
+Например, число 123 = 1 + 2 + 3, а не 123 = 1 + 23 или 123 = 12 + 3.*/
+
+
+/*
+public class MainClass
+{
+    public static void Main(string[] args)
+    {
+        int n = ReadInput();
+        bool result = false;
+
+        result = HasBreakpoint(n);
+
+        Console.WriteLine(result.ToString().ToLower());
+    }
+
+    public static bool HasBreakpoint(int number)
+    {
+        string strN = number.ToString();
+        for (int i = 1; i < strN.Length; i++)
+        {
+            string left = strN.Substring(0, i);
+            string right = strN.Substring(i);
+
+            int sumLeft = left.Sum(c => c - '0');
+            int sumRight = right.Sum(c => c - '0');
+
+            if (sumLeft == sumRight)
+            {
+                return true;
+            }
+        }
+        return false;
+
+    }
+
+    public static int ReadInput()
+    {
+        return int.Parse(Console.ReadLine());
+    }
+}*/
 
     
 
