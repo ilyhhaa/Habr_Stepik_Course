@@ -1045,3 +1045,114 @@ data - список из элементов целых чисел.
         return data ?? new List<int>();
     }
 }*/
+
+     //23
+/*У вас есть переменные num, data которые содержат входные пользовательские данные.
+
+data - список из элементов целых чисел.
+
+Напишите код, который определяет все ли числа в списке data больше num и записывает логический результат в переменную result.*/
+
+/*using System.Text.Json;
+
+public class MainClass
+{
+    public static void Main(string[] args)
+    {
+        (int num, List<int> data) = ReadInput();
+        bool result = data.Exists(c => c < num) ? false : true;
+
+
+
+        Console.WriteLine(result.ToString().ToLower());
+    }
+
+    public static (int num, List<int> data) ReadInput()
+    {
+        string input = Console.ReadLine();
+        if (!string.IsNullOrEmpty(input))
+        {
+            string[] values = input.Split(" | ");
+            int num = int.Parse(values[0]);
+            string json = values[1];
+            List<int> data = JsonSerializer.Deserialize<List<int>>(json);
+            return (num, data);
+        }
+
+        return (0, new List<int>());
+    }
+}*/
+
+
+//24
+
+/*У вас есть переменные num, data которые содержат входные пользовательские данные.
+
+data - список из элементов целых чисел.
+
+Напишите код, который определяет все ли числа в списке data меньше num и записывает логический результат в переменную result.
+*/
+
+/*using System.Text.Json;
+
+public class MainClass
+{
+    public static void Main(string[] args)
+    {
+        (int num, List<int> data) = ReadInput();
+        bool result = data.Exists(c => c > num) ? false : true;
+
+
+        Console.WriteLine(result.ToString().ToLower());
+    }
+
+    public static (int, List<int>) ReadInput()
+    {
+        string input = Console.ReadLine();
+        if (!string.IsNullOrEmpty(input))
+        {
+            string[] values = input.Split(" | ");
+            int num = int.Parse(values[0]);
+            string json = values[1];
+            List<int> data = JsonSerializer.Deserialize<List<int>>(json);
+            return (num, data);
+        }
+
+        return (0, null);
+    }
+}*/
+
+//25
+
+/*
+ У вас есть переменная data, которая содержит входные пользовательские данные.
+
+data - список из элементов строк.
+
+Напишите код, который обращает порядок следования элементов списке data и записывает результат через запятую в переменную result.
+
+ */
+
+/*using System.Text;
+using System.Text.Json;
+
+public class MainClass
+{
+    public static void Main(string[] args)
+    {
+        List<string> strings = new List<string>() { "Билли", "Стив", "Майк", "Дастин", "Макс" };
+        string result;
+        result = ReverseAndJoin(strings);
+        Console.WriteLine(result);
+        Console.ReadLine();
+    }
+
+    public static string ReverseAndJoin(List<string> data)
+    {
+
+        return string.Join(", ", data.ToArray().Reverse());
+        
+    }
+
+    
+}*/
