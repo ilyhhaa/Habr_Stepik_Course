@@ -1014,3 +1014,34 @@ public class MainClass
     }
 }*/    
 
+//22
+
+/*У вас есть переменная data, которая содержит входные пользовательские данные.
+
+data - список из элементов целых чисел.
+
+Напишите код, который определяет все ли числа в списке data нечетные и записывает логический результат в переменную result.*/
+
+/*public class MainClass
+{
+    public static void Main(string[] args)
+    {
+        List<int> data = ReadInput();
+        bool result = data.Exists(c => c % 2 == 0) ? false : true;
+
+        Console.WriteLine(result.ToString().ToLower());
+    }
+
+    public static List<int> ReadInput()
+    {
+        List<int> data = null;
+
+        string input = Console.ReadLine();
+        if (!string.IsNullOrEmpty(input))
+        {
+            data = JsonSerializer.Deserialize<List<int>>(input);
+        }
+
+        return data ?? new List<int>();
+    }
+}*/
