@@ -1156,3 +1156,83 @@ public class MainClass
 
     
 }*/
+//26
+
+/*
+ * У вас есть переменная data, которая содержит входные пользовательские данные.
+
+data - список из строковых элементов.
+
+Напишите код, который сортирует строковые элементы списка data в порядке возрастания и записывает результат через запятую в переменную result.
+ */
+
+
+/*using System.Text.Json;
+
+public class MainClass
+{
+    public static void Main(string[] args)
+    {
+        List<string> data = ReadInput();
+        string result;
+        result = SortAndJoin(data);
+        Console.WriteLine(result);
+    }
+
+    public static string SortAndJoin(List<string> data)
+    {
+        return string.Join(", ", data.OrderBy(c => c));
+    }
+
+    public static List<string> ReadInput()
+    {
+        string input = Console.ReadLine();
+        if (!string.IsNullOrEmpty(input))
+        {
+            string[] dataArray = JsonSerializer.Deserialize<string[]>(input);
+            return new List<string>(dataArray);
+        }
+        return null;
+    }
+}*/
+
+
+//27
+
+/*
+ У вас есть переменная data, которая содержит входные пользовательские данные.
+
+data - список из элементов целых чисел.
+
+Напишите код, который сортирует числовые элементы списка data в порядке возрастания и записывает результат через запятую в переменную result.
+ */
+
+
+/*using System.Text.Json;
+
+public class MainClass
+{
+    public static void Main(string[] args)
+    {
+        List<int> data = ReadInput();
+        string result;
+        result = SortAndJoin(data);
+        Console.WriteLine(result);
+    }
+
+    public static string SortAndJoin(List<int> data)
+    {
+        return string.Join(", ", data.OrderBy(c => c));
+    }
+
+    public static List<int> ReadInput()
+    {
+        string input = Console.ReadLine();
+        if (!string.IsNullOrEmpty(input))
+        {
+            int[] dataArray = JsonSerializer.Deserialize<int[]>(input);
+            return new List<int>(dataArray);
+        }
+        return null;
+    }
+}*/     
