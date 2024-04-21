@@ -1236,3 +1236,70 @@ public class MainClass
         return null;
     }
 }*/     
+
+     //28
+
+/*У вас есть переменная data, которая содержит входные пользовательские данные.
+
+data - список из элементов целых чисел.
+
+Напишите код, который сортирует числовые элементы списка data в порядке возрастания, отсеивает дубликаты и записывает результат через запятую в переменную result.*/
+
+/*
+using System.Text.Json;
+
+public class MainClass
+{
+    public static void Main(string[] args)
+    {
+        List<int> data = ReadInput();
+        string result = string.Join(", ", data.OrderBy(c => c).ToHashSet());
+        Console.WriteLine(result);
+    }
+
+    public static List<int> ReadInput()
+    {
+        string input = Console.ReadLine();
+        if (!string.IsNullOrEmpty(input))
+        {
+            int[] dataArray = JsonSerializer.Deserialize<int[]>(input);
+            return new List<int>(dataArray);
+        }
+        return null;
+    }
+}*/
+
+//29
+
+/*
+ У вас есть переменная tags, которая содержит входные пользовательские данные.
+
+tags - список из элементов строк.
+
+Напишите код, который сортирует строковые элементы списка tags в порядке возрастания, отсеивает дубликаты и записывает результат через запятую в переменную result.*/
+
+/*using System.Text.Json;
+
+public class MainClass
+{
+    public static void Main(string[] args)
+    {
+        List<string> tags = ReadInput();
+        string result = string.Join(", ", tags.OrderBy(c => c).ToHashSet());
+
+
+
+        Console.WriteLine(result);
+    }
+
+    public static List<string> ReadInput()
+    {
+        string input = Console.ReadLine();
+        if (!string.IsNullOrEmpty(input))
+        {
+            string[] dataArray = JsonSerializer.Deserialize<string[]>(input);
+            return new List<string>(dataArray);
+        }
+        return null;
+    }
+}*/
