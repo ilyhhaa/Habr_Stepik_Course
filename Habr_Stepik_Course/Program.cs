@@ -1303,3 +1303,53 @@ public class MainClass
         return null;
     }
 }*/
+
+//30
+
+/*У вас есть переменная tags, которая содержит входные пользовательские данные.
+
+tags - список из элементов строк.
+
+Напишите код, который считает количество тегов в списке tags и записывает отсортированный результат в том порядке в котором теги были найдены через запятую в переменную result.*/
+
+
+
+/*using System.Text.Json;
+
+public class MainClass
+{
+    public static void Main(string[] args)
+    {
+        List<string> tags = new List<string> { "action", "adventure", "strategy", "simulation", "sports", "racing", "puzzle", "strategy", "simulation", "sports" };
+            Dictionary<string, int> tagCounts = new Dictionary<string, int>();
+
+            foreach (string tag in tags)
+            {
+                if (tagCounts.ContainsKey(tag))
+                {
+                    tagCounts[tag]++;
+                }
+                else
+                {
+                    tagCounts[tag] = 1;
+                }
+            }
+
+            string result = string.Join(", ", tagCounts.Select(x => $"{x.Key}: {x.Value}"));
+            Console.WriteLine(result);
+    
+
+
+    }
+
+    public static List<string> ReadInput()
+    {
+        string input = Console.ReadLine();
+        if (!string.IsNullOrEmpty(input))
+        {
+            string[] dataArray = JsonSerializer.Deserialize<string[]>(input);
+            return new List<string>(dataArray);
+        }
+        return null;
+    }
+}*/     
